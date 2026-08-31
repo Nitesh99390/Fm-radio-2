@@ -28,6 +28,7 @@
             --accent-3: #22d3ee;
             --glow-red: rgba(255, 61, 90, 0.55);
             --glow-grey: rgba(255, 255, 255, 0.35);
+            --glow-blue: rgba(59, 130, 246, 0.45);
             --shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
             --radius-lg: 24px;
             --radius-md: 16px;
@@ -48,6 +49,7 @@
             --text-3: #7a7a98;
             --glow-red: rgba(255, 61, 90, 0.35);
             --glow-grey: rgba(60, 60, 90, 0.3);
+            --glow-blue: rgba(59, 130, 246, 0.35);
             --shadow: 0 24px 60px rgba(40, 40, 90, 0.18);
         }
 
@@ -160,11 +162,13 @@
             animation: rippleAnim 0.7s var(--ease) forwards;
         }
         @keyframes rippleAnim { to { transform: scale(4); opacity: 0; } }
+        
         .gofile-btn {
             background: linear-gradient(135deg, #ff2d55, #ff3d5a 55%, #e11d48);
             box-shadow: 0 0 18px var(--glow-red), 0 18px 40px rgba(255, 45, 85, 0.28);
         }
         .gofile-btn:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 0 42px var(--glow-red), 0 26px 56px rgba(255, 45, 85, 0.4); }
+        
         .github-btn {
             background: linear-gradient(135deg, #3a3a46, #2a2a34); border-color: var(--border);
             box-shadow: 0 0 16px var(--glow-grey), 0 18px 40px rgba(0, 0, 0, 0.35);
@@ -173,6 +177,16 @@
             transform: translateY(-4px) scale(1.02); background: linear-gradient(135deg, #2c2c38, #1d1d26);
             box-shadow: 0 0 34px var(--glow-grey), 0 26px 56px rgba(0, 0, 0, 0.5);
         }
+
+        .server-btn {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            box-shadow: 0 0 18px var(--glow-blue), 0 18px 40px rgba(37, 99, 235, 0.28);
+        }
+        .server-btn:hover {
+            transform: translateY(-4px) scale(1.02); 
+            box-shadow: 0 0 42px var(--glow-blue), 0 26px 56px rgba(37, 99, 235, 0.4);
+        }
+        
         .download-btn:active { transform: translateY(-1px) scale(0.98); }
 
         /* ============ Footer ============ */
@@ -217,7 +231,15 @@
                 <h1 class="reveal">Priya <span class="grad-text">Infinity Pro</span></h1>
 
                 <div class="download-grid reveal">
-                    <!-- UPDATED GOFILE LINK HERE -->
+                    
+                    <a href="http://144.24.114.118:5000/s/Z8rrNBPsT0p1" class="download-btn server-btn" target="_blank" rel="noopener noreferrer">
+                        <span class="btn-icon" aria-hidden="true"><i class="fa-solid fa-server"></i></span>
+                        <span>
+                            Download from Server
+                            <span class="btn-sub">.apk</span>
+                        </span>
+                    </a>
+
                     <a href="https://gofile.io/d/a740dbb9-cdff-42a0-8ec7-b0b82a7c8b43" class="download-btn gofile-btn" target="_blank" rel="noopener noreferrer">
                         <span class="btn-icon" aria-hidden="true"><i class="fa-solid fa-cloud-arrow-down"></i></span>
                         <span>
